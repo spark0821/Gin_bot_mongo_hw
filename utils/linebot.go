@@ -10,6 +10,7 @@ import (
 var linebotClient *linebot.Client
 
 func NewLinebot() {
+
 	settings := config.GetConfig()
 	channelSecret := settings.GetString("LINE_CHANNEL_SECRET")
 	channelAccess := settings.GetString("LINE_CHANNEL_ACCESS")
