@@ -3,12 +3,14 @@
 
 ### 執行步驟
 #### 初始化
+
 * Step1. Build Config
 ```sh
 cp .env.example .env
 ```
 
 * Step2. Change .env config (LineBot & MongoDB)
+
 ```sh
 DB_CONNECTION = mongodb
 DB_HOST = mongo
@@ -42,19 +44,19 @@ docker-compose up -d --build
 
 ### How To Use
 * 連接測試
+  `curl https://{domain}`
 
-`curl https://{domain}`
 * 取得官方帳號訊息列表
+  `[GET] https://{domain}/user/{Line official account user id}/messages`
 
-`[GET] https://{domain}/user/{Line official account user id}/messages`
-* 利用官方帳號推送訊息
+* 官方帳號推送訊息
+  `[POST] https://{domain}/messages/push`
 
-`[POST] https://{domain}/messages/push`
-```sh
-# Content-Type: application/json
-# Body parameters
-{
-    "UserID": "Line official account user id",
-    "Content": "some message you want to push"
-}
-```
+    ```sh
+    # Content-Type: application/json
+    # Body parameters
+    {
+        "UserID": "Line official account user id",
+        "Content": "some message you want to push"
+    }
+    ```
