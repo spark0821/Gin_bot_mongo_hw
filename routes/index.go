@@ -7,6 +7,7 @@ import (
 )
 
 func SetupRouter() *gin.Engine {
+
 	router := gin.Default()
 
 	// Ping test
