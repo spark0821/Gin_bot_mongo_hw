@@ -11,7 +11,9 @@ import (
 
 func main() {
 	config.Init()
+
 	database.Init()
+
 	utils.NewLinebot()
 	validators.RegisterValidation()
 	router := routes.SetupRouter()
