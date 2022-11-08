@@ -17,6 +17,7 @@ import (
 )
 
 func GetHi(request *gin.Context) {
+
 	request.IndentedJSON(http.StatusOK, gin.H{
 		"message": "Hi there!",
 	})
