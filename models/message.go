@@ -60,6 +60,7 @@ func NewEvent(event CommonEvent) *Event {
 
 func NewLineEvent(lineEvent *linebot.Event) *LineEvent {
 	return &LineEvent{
+
 		UserId:    lineEvent.Source.UserID,
 		Timestamp: lineEvent.Timestamp,
 		Message:   lineEvent.Message,
