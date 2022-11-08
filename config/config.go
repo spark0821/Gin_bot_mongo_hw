@@ -6,6 +6,7 @@ var config *viper.Viper
 
 func Init() {
 	config = viper.New()
+
 	config.SetConfigFile(".env")
 	config.ReadInConfig()
 
