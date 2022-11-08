@@ -38,6 +38,7 @@ func assembleUri() string {
 
 func GetClient() *mongo.Client {
 	return mongodb
+
 }
 
 func Close() {
