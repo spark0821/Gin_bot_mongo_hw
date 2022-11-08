@@ -16,5 +16,6 @@ type GetMessages struct {
 }
 
 var Trim validator.Func = func(fl validator.FieldLevel) bool {
+
 	return strings.Trim(fl.Field().String(), " ") != ""
 }
